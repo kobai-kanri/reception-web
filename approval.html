@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=0" />
+
+        <title>稟議書ばい</title>
+
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/approval.css" />
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    </head>
+
+    <body>
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <a href="index.html"><img src="img/logo.png"/></a>
+                <h1 id="title" class="title">稟議書</h1>
+                <nav>
+                    <ul>
+                        <li><a href="help.html">依頼</a></li>
+						<li><a href="approval.html">稟議書(予定)</a></li>
+                        <li><a href="#">工事中ばい</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div id="main-container" class="main-container">
+            <div class="main wrapper clearfix">
+                <article>
+                    <form action="http://localhost:8080" method="POST">
+                        <header>
+                            <h1>起案情報</h1>
+                            <hr />
+                        </header>
+
+                        <section>
+                            <lable for="input_title"><h2>件名</h2></lable>
+                            <input type="text" id="input_title" name="title" />
+                        </section>
+
+                        <section>
+                            <lable for="input_reason"><h2>理由</h2></lable>
+                            <input type="text" id="input_reason" name="reason" />
+                        </section>
+
+                        <section>
+                            <lable for="input_drafter"><h2>起案者</h2></lable>
+                            <input type="text" id="input_drafter" name="drafter" />
+                        </section>
+
+                        <header>
+                            <h1>購入内容</h1>
+                            <hr />
+                        </header>
+                        <section>
+                            <table border="2" cellpadding="6" cellspacing="5">
+                                <tr>
+                                    <th>品目</th>
+                                    <th>単価</th>
+                                    <th>数量</th>
+                                    <th style="width: 60px">小計</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" id="input_item_name" name="item_name" />
+                                    </td>
+                                    <td>
+                                        <input type="text" id="input_item_amount" name="item_amount" />
+                                    </td>
+                                    <td>
+                                        <input type="text" id="input_item_count" name="item_count" />
+                                    </td>
+                                    <td id="item_total" style="text-align: right">
+                                        <div style="text-align: left">¥</div>
+                                        <div style="text-align: right">0</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>なし</td>
+                                    <td>黄緑</td>
+                                    <td>甘い</td>
+                                    <td>甘い</td>
+                                </tr>
+                                <tr>
+                                    <td>合計</td>
+                                    <td colspan="3" style="text-align: right">¥10,000</td>
+                                </tr>
+                            </table>
+                        </section>
+
+                        <section>
+                            <h2>添付資料</h2>
+                            <p>今はURLで</p>
+                        </section>
+
+                        <section>
+                            <h2>支払い方法</h2>
+                            <p>経理班へ依頼</p>
+                        </section>
+
+                        <section>
+                            <h3>備考</h3>
+                            <p></p>
+                        </section>
+
+                        <header>
+                            <h1>管理方法</h1>
+                            <hr />
+                        </header>
+                        <section>
+                            <h2>管理者</h2>
+                            <p>甲 81</p>
+                        </section>
+
+                        <section>
+                            <h2>管理場所</h2>
+                            <p>第４倉庫</p>
+                        </section>
+
+                        <section>
+                            <h3>備考</h3>
+                            <p></p>
+                        </section>
+
+                        <!-- 起案日は送信日をそのまま登録するので、入力しない -->
+                        <section style="display:none">
+                            <h2>起案日</h2>
+                            <p>甲 81</p>
+                        </section>
+
+                        <footer>
+                            <hr />
+                            <button>確認</button>
+                        </footer>
+                    </form>
+                </article>
+
+                <aside>
+                    <h3>aside</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit
+                        mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.
+                    </p>
+                </aside>
+            </div>
+            <!-- #main -->
+        </div>
+        <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <a href="mailto:kobai@rootship.co.jp?subject=【お問い合わせ】"><img src="img/mail.png"></img></a>
+				<a href="ko-81/index.html"><img src="img/member.png"></img></a>
+            </footer>
+        </div>
+    </body>
+</html>
